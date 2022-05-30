@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background: linear-gradient(230deg, #8a00ff9c, #1400ffab); */
+    /* height: 100vh; */
+    background: url("../Components/dark_wood.png");
+}
+
+h1 {
+    margin-top: 10%;
+    text-align: center;
+    color: #fff;
+}
+
+.signUpLogIn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 60vh;
+}
+
+@keyframes example {
+    /* from {
+        background-color: rgb(98, 0, 255);
+    }
+    to {
+        background-color: rgba(47, 0, 255, 0.493);
+    } */
+    0% {
+        background-color: rgba(119, 0, 255, 0.308);
+    }
+    25% {
+        background-color: rgb(20, 20, 2);
+    }
+    50% {
+        background-color: rgba(0, 0, 255, 0.212);
+    }
+    100% {
+        background-color: rgb(0, 128, 90);
+    }
+}
+
+.signUp,
+.logIn {
+    border-radius: 15px;
+    color: #fff;
+    text-decoration: none;
+    width: 120px;
+    height: 50px;
+    border: 1px solid;
+    padding: 5px 15px 8px 15px;
+    /* background: black; */
+    font-size: 25px;
+    font-family: Poppins;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+.signUp:hover,
+.logIn:hover {
+    transform: scale(1.2);
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+
+.outline,
+.linkedin,
+.playstore,
+.facebook,
+.google {
+    width: 30px;
+    height: 25px;
+    color: #fff;
+}
+
+a {
+    margin: 0 2%;
+}

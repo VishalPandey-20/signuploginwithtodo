@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Intl-tele -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+
+    <link rel="stylesheet" href="./signUp.css">
+    <title>SingUp</title>
+    <a href="../index.html">Home</a>
+</head>
+
+<body>
+    <h1>Welcome to SingUp</h1>
+    <p><input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;"></p>
+    <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+    <p><img id="output" height="70px" width="100" /></p>
+
+    <script>
+        var loadFile = function(event) {
+            var image = document.getElementById('output');
+            image.src = URL.createObjectURL(event.target.files[0]);
+        };
+    </script>
+    <form action="">
+        <div class="small-chaild">
+            <!-- <label for="">FirstName:-</label> -->
+            <input type="text" name="" id="FirstName" placeholder="FirstName" autocomplete="off" required>
+        </div>
+        <!-- <div></div> -->
+        <div class="small-chaild">
+            <!-- <label for="">LastName:-</label> -->
+            <input type="text" name="" id="LastName" placeholder="LastName" autocomplete="off" required>
+        </div>
+        <div class="small-chaild">
+            <!-- <label for="">Phone:-</label> -->
+            <input id="phone" type="tel" placeholder="Phone" autocomplete="off" required />
+            <span id="error-num" class="hide isValidMsg span">Invalid</span>
+            <span id="valid-num" class="hide isValidMsg span">Valid</span>
+
+        </div>
+        <div class="small-chaild">
+            <!-- <label for="">Address:-</label> -->
+            <input type="text" name="" id="Address" placeholder="Address" autocomplete="off" required>
+        </div>
+        <div class="small-chaild">
+            <input type="date" id="dob" placeholder="Date Of Birth : dd/mm/year" autocomplete="off" />
+            <span id="under-age-error" class="hide isValidMsg span">Below 18 Years Old..!</span>
+        </div>
+        <div class="small-chaild">
+            <!-- <label for="">Email:-</label> -->
+            <input type="email" id="email" placeholder="Email" autocomplete="off" required />
+            <span id="email-error" class="hide isValidMsg span">Invalid Email</span>
+            <span id="userExist" class="hide isValidMsg span">User All Ready exist</span>
+
+            <!-- <input type="email" name="" id="userEmail" placeholder="Email" autocomplete="off" required>
+            <span class="span spanEmail hide">Invalid Email</span> -->
+        </div>
+
+        <div class="small-chaild">
+            <!-- <label for="">Password:-</label> -->
+            <input type="password" name="" id="Password" placeholder="Password" autocomplete="off" required>
+            <span class="span hide" id="passwordStrong">Password is not strong..!</span>
+        </div>
+        <div class="small-chaild">
+            <!-- <label for="">ConfromPassword:-</label> -->
+            <input type="password" name="" id="ConfromPassword" placeholder="ConfromPassword" autocomplete="off" required>
+            <span class="span hide" id="matched">Password is not matched..!</span>
+        </div>
+
+        <button type="submit" class="btn">Submit</button>
+    </form>
+    <!-- <script src="./sigUp.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js "></script>
+    <script defer src="./phone.js"></script>
+    <!-- <script defer src="./sigUp.js"></script> -->
+    <script src="./signUp.js"></script>
+    <!-- .google places api -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDN9vfYnKn3W09icpohL31TmnDlW9q29I&callback=initAutocomplete&libraries=places&v=weekly " async></script>
+</body>
+
+</html>
